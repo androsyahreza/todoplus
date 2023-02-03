@@ -1,0 +1,945 @@
+{
+	"info": {
+		"_postman_id": "7601bcbd-af40-4bb1-9a17-dbfc8b8180de",
+		"name": "TodoPlus On Deploy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22478780"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "John Doe",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "johndoe@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "johnsmith@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "access_token",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/logout",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/refreshToken?refresh_token",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"refreshToken"
+							],
+							"query": [
+								{
+									"key": "refresh_token",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profiles",
+			"item": [
+				{
+					"name": "Add Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkphbmUgUm9lIiwiaWF0IjoxNjc0MzEzNTUyfQ.LPyKGzWX6lradbokd7ZZxKz0vWV6HdGZ_1AdfyU0M84",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "image",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/profile",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNjc1NDE4MjcyLCJleHAiOjE2NzU0MjE4NzJ9.8j9A1NSDDA4Akk3eJJcAlfluFmprrW_dfFj3FFN0oIs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/profile/1",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "image",
+									"value": "https://www.flaticon.com/free-icon/profile_3135715?term=profile&page=1&position=2&origin=tag&related_id=3135715",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "johnsmith",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "trustworthy",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/profile/3",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Profile Goals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/goals",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"goals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Profile Goals Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/profile/3/goals/1",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"3",
+								"goals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Followings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/profile/1/followings",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"1",
+								"followings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Followers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/profile/1/followings",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"1",
+								"followings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/profile/1/notifications",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"1",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Notifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "notification_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/profile/1/notifications",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile",
+								"1",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IkpvaG4gU21pdGgiLCJpYXQiOjE2NzQ4MDMwNjgsImV4cCI6MTY3NDgwNjY2OH0.59n-uMTj_AxiSceKPIMFoW0oe86gaD2sNcuwJBybjmI",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Goals",
+			"item": [
+				{
+					"name": "Add Goal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "goal_owner",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/goals",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"goals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Goal Member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "goal_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/goalsMember",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"goalsMember"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Goal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Learn Node.js",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Asynchronous",
+									"type": "text"
+								},
+								{
+									"key": "goal_owner",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/goals/1",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"goals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Goal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/goals/1",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"goals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Add Tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Asynchronous",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2023-01-22",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "19:30:00",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "is_finished",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/goals/1/tasks",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"goals",
+								"1",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/goals/1/tasks/1",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"goals",
+								"1",
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/goals/1/tasks/1",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"goals",
+								"1",
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Friends",
+			"item": [
+				{
+					"name": "View Friends",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/friends",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"friends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Follow Friends",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "following_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/friends",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"friends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unfollow Friends",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "following_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://13.215.155.67:3000/api/friends",
+							"protocol": "http",
+							"host": [
+								"13",
+								"215",
+								"155",
+								"67"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"friends"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNjc1NDE4MjcyLCJleHAiOjE2NzU0MjE4NzJ9.8j9A1NSDDA4Akk3eJJcAlfluFmprrW_dfFj3FFN0oIs",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
