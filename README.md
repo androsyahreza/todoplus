@@ -57,7 +57,7 @@ RESTful API Endpoints are shown in the table below:
 | POST | `/api/profile`| Add a new profile |
 | GET | `/api/profile/{userId}`| View a profile |
 | PUT | `/api/profile/{userId}`| Update a profile |
-| GET | `/api/profile/{userId}/goals`| View a user goals |
+| GET | `/api/profile/{userId}/goals?goal={query}`| View a user goals |
 | GET | `/api/profile/{userId}/goals/{goalId}`| View the detail of user's goals |
 | GET | `/api/profile/{userId}/followings`| View the followings of a user |
 | GET | `/api/profile/{userId}/followers`| View the followers of a user |
