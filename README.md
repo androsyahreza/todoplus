@@ -9,7 +9,7 @@
 * [Setup](#setup)
 
 ## General info
-TodoPlus is a shared to-do list app built with Node.js and PostgreSQL that uses the Sequelize ORM. It is a to-do list app that allows users to share goals and tasks with each other. Users can add friends and receive notifications when a task is about to reach its deadline (30 minutes before). The app helps users stay organized and on track with their tasks, allowing them to collaborate and achieve their goals together.
+TodoPlus is a shared to-do list app built with Node.js and PostgreSQL that uses the ExpressJS Framework and Sequelize ORM. It is a to-do list app that allows users to share goals and tasks with each other. Users can add friends and receive notifications when a task is about to reach its deadline (30 minutes before). The app helps users stay organized and on track with their tasks, allowing them to collaborate and achieve their goals together.
 ### Architecture Diagram of TodoPlus
 ![architecture-diagram](/src/assets/image/architecture-diagram.png)
 
