@@ -87,6 +87,9 @@ RESTful API Endpoints are shown in the table below:
 ### Postman Collection
 You can test this API by using the postman application. Please [**Click here**](https://github.com/androsyahreza/todoplus/tree/main/src/assets/postman-collection) to view the postman collection that was created for this application.
 
+### Testing RESTful API Video
+[**Click here**](https://youtu.be/UV51_txLPhs) to view video. The video demonstrated how to test the functionality of a TodoPlus - a Node.js Restful API for a to-do list app. 
+
 ## Setup
 To run this project, install it locally using npm:
 ```
