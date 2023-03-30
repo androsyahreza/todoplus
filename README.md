@@ -95,5 +95,6 @@ To run this project, install it locally using npm:
 ```
 $ cd todoplus
 $ npm install
+$ npx sequelize-cli db:migrate
 $ npm start
 ```
